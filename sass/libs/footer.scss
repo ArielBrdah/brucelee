@@ -1,0 +1,23 @@
+/* FOOTER */
+
+$height-footer:300px;
+
+footer{
+background: rgb(50,50,50);
+height:$height-footer;
+    color:rgb(200,200,200);
+}
+
+footer .wrapper h2{
+    padding-top: 50px;
+    text-align: center;
+    margin: 50px auto;
+    font-family: 'Orbitron',cursive,Arial, Helvetica, sans-serif;
+    font-size:56px;
+    text-transform: uppercase;
+}
+
+footer .wrapper small{
+    text-align: center;
+    margin-left: 630px;
+}

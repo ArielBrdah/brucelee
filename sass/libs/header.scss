@@ -1,0 +1,109 @@
+/* HEADER */
+
+$height:90px;
+$width-nav:50%;
+$width-logo:50%;
+$line-height-ul:25px;
+$color-sel:#ffaf00;
+$color-bas:rgb(200,200,200);
+$bg-color:rgb(50,50,50);
+$font-logo:rgb(200,240,240);//#ffaf00
+
+header{
+    // display:block;
+    // position:relative;
+    box-sizing:border-box;
+    width:100%;
+    height:$height;
+    // background-color: rgba(250,250,250,1);
+    background-color: $bg-color;
+    // overflow:hidden;
+    // border-bottom:solid black 1px;   
+}
+
+header #logo{
+    float:left;
+    font-style: italic;
+    font-family: 'Orbitron','Rajdha One','Fjalla One', sans-serif;
+    height:$height;
+    width:$width-logo;
+}
+
+header #logo h1{
+    // color:#222555;
+    color:$font-logo;
+    // color:yellow;
+    width:40%;
+    text-align: right;
+    font-size: 72px;
+    text-transform: uppercase;
+    margin:0;
+    padding:0;
+    line-height:25px;
+    margin-top:32.5px;
+    // background: rgb(255,226,0);
+// background: linear-gradient(180deg, rgba(255,226,0,1) 5%, rgba(77,70,15,1) 5%, rgba(77,70,15,1) 10%, rgba(255,226,0,1) 10%, rgba(255,226,0,1) 90%, rgba(77,70,15,1) 90%, rgba(77,70,15,1) 95%, rgba(255,226,0,1) 95%);
+animation-name: defilement;
+animation-duration: 0.3s;
+animation-fill-mode: forwards;
+// box-shadow: black 10px 1px 3px 9px;
+}
+
+@keyframes defilement
+{
+    100%{
+        width:100%;
+    }
+}
+
+header #logo h1 .yellow{
+    // text-shadow:yellow 0px 0px 4px;
+    // color:yellow;
+    // color:#aaaaaa;
+
+    color:$color-bas;
+}
+
+
+
+header nav{
+    display:block;
+    font-family: 'Dosis',sans-serif;
+    float:right;
+    width:$width-nav;
+    text-transform: lowercase;
+    overflow: hidden;
+}
+
+header nav ul{
+    display:block;
+    height:$line-height-ul;
+    width:100%;
+    margin: 32.5px 0;
+    // overflow:hidden;
+    padding: 0 0;
+    padding: 0 30%;  
+}
+
+header nav ul li{
+    display: inline-block;
+    margin-right: 2.3em;
+    line-height: 35px;
+}
+
+header nav ul li a{
+    line-height: 28px;
+    font-size: 28px;
+    margin:0;
+    padding:0;
+    font-weight: bold;
+    color:$color-bas;
+    text-transform: capitalize;
+}
+
+header nav ul li a:hover{
+    // color:rgba(20,20,20,1);
+    color:$color-sel;
+
+}
+

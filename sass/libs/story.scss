@@ -1,0 +1,107 @@
+/* STORY */
+
+$height-story:1200px;
+$bg-story1:#ffaf00;
+$bg-story:rgb(50,50,50);
+$font-color:rgb(200,240,240);
+$font-h2:rgb(200,240,240);//#ffaf00;
+
+%bg-transparent{
+    background:rgba(255,255,255,0);
+}
+
+#story{
+    // display: none;
+    height:$height-story;
+    // background:rgba(100,100,140,1);
+    background:$bg-story;
+    font-family: 'Fjalla One','Dosis',sans-serif;
+    font-weight:thin;
+    overflow:hidden;
+    // background: rgb(255,255,255);
+// background: radial-gradient(circle, rgba(255,255,255,1) 5%, rgba(255,0,0,1) 5%, rgba(255,0,0,1) 10%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 15%, rgba(255,0,0,1) 15%, rgba(255,0,0,1) 20%, rgba(255,255,255,1) 20%, rgba(255,255,255,1) 25%, rgba(255,0,0,1) 25%, rgba(255,0,0,1) 30%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 35%, rgba(255,0,0,1) 35%, rgba(255,0,0,1) 40%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 45%, rgba(255,0,0,1) 45%, rgba(255,0,0,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 55%, rgba(255,0,0,1) 55%, rgba(255,0,0,1) 60%, rgba(255,255,255,1) 60%, rgba(255,255,255,1) 65%, rgba(255,0,0,1) 65%, rgba(255,0,0,1) 70%, rgba(255,255,255,1) 70%, rgba(255,255,255,1) 75%, rgba(255,0,0,1) 75%, rgba(255,0,0,1) 80%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 85%, rgba(255,0,0,1) 85%, rgba(255,0,0,1) 90%, rgba(255,255,255,1) 90%, rgba(255,255,255,1) 95%, rgba(255,0,0,1) 95%, rgba(255,0,0,1) 100%, rgba(255,255,255,1) 100%);
+// background: rgb(255,255,255);
+// background: linear-gradient(90deg, rgba(255,255,255,1) 5%, rgba(255,0,0,1) 5%, rgba(255,0,0,1) 10%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 15%, rgba(255,0,0,1) 15%, rgba(255,0,0,1) 20%, rgba(255,255,255,1) 20%, rgba(255,255,255,1) 25%, rgba(255,0,0,1) 25%, rgba(255,0,0,1) 30%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 35%, rgba(255,0,0,1) 35%, rgba(255,0,0,1) 40%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 45%, rgba(255,0,0,1) 45%, rgba(255,0,0,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 55%, rgba(255,0,0,1) 55%, rgba(255,0,0,1) 60%, rgba(255,255,255,1) 60%, rgba(255,255,255,1) 65%, rgba(255,0,0,1) 65%, rgba(255,0,0,1) 70%, rgba(255,255,255,1) 70%, rgba(255,255,255,1) 75%, rgba(255,0,0,1) 75%, rgba(255,0,0,1) 80%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 85%, rgba(255,0,0,1) 85%, rgba(255,0,0,1) 90%, rgba(255,255,255,1) 90%, rgba(255,255,255,1) 95%, rgba(255,0,0,1) 95%, rgba(255,0,0,1) 100%, rgba(255,255,255,1) 100%);
+}
+
+#story .wrapper h2.story{
+    // color and fonts
+    // color: #000000;
+    color:$font-h2;
+    text-shadow: rgb(20,20,100,1) 10px 10px 20px;
+    font-family: 'Fjalla One','Orbitron',arial;
+    font-weight:100;
+    text-transform: uppercase;
+    background-image: url('images/red-trace.png');
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: 460px;
+    background-position-y: -200px;
+
+    //disposition
+    text-align:center;
+    width:100%;
+    font-size: 120px;
+    padding-top: 100px;
+    padding-bottom: 190px;
+    font-style: italic;
+    // margin-bottom:50px;
+}
+
+#story .wrapper article{
+    // color:black;
+    color:$font-color;
+    font-family: 'Dosis',arial;
+    width:100%;
+    margin-bottom: 100px;
+    // font-family: 28px;
+}
+
+#story .wrapper article .pic-left{
+      background-image: url(images/presentation.jpg);
+      height:277px;
+      background-size: 300px 277px;//220px 277px;
+      background-repeat: no-repeat;
+      padding:0;
+      margin:0;
+    width:19%;
+margin-left: 105px;/*160px;*/
+margin-right:60px;
+transform: translateY(-15px);
+box-shadow: rgb(20,0,0) -2px -2px 5px 5px;
+}
+
+#story .wrapper article .p-right{
+    // background:white;
+    @extend %bg-transparent;
+    width:40%;
+    margin:0;
+    padding:0;
+    text-align: center;
+    font-size: 20px;
+        &::first-letter{
+            color:#efaf00;
+            font-size:28px;
+            font-weight: bold;
+        }
+}
+
+
+#story .wrapper article .p-left{
+    @extend .p-right;
+    margin:0;
+    padding:0;
+    margin-left:460px;
+}
+
+#story .wrapper article .pic-right{
+@extend .pic-left;
+background-image: url(images/main-image1.jpg);
+      background-size: 300px 277px;
+    margin:0;
+    padding:0;
+    margin-left:80px;
+box-shadow: rgb(20,0,0) 2px 2px 5px 5px;
+transform: translateY(35px);
+}

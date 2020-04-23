@@ -1,0 +1,423 @@
+/* RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* GENERAL */
+* {
+  margin: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clear {
+  clear: both;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.float-left {
+  float: left;
+  overflow: hidden;
+}
+
+.float-right {
+  float: right;
+  overflow: hidden;
+}
+
+.in-block {
+  display: inline-block;
+}
+
+/* HEADER */
+header {
+  box-sizing: border-box;
+  width: 100%;
+  height: 90px;
+  background-color: #323232;
+}
+
+header #logo {
+  float: left;
+  font-style: italic;
+  font-family: "Orbitron", "Rajdha One", "Fjalla One", sans-serif;
+  height: 90px;
+  width: 50%;
+}
+
+header #logo h1 {
+  color: #c8f0f0;
+  width: 40%;
+  text-align: right;
+  font-size: 72px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  line-height: 25px;
+  margin-top: 32.5px;
+  animation-name: defilement;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes defilement {
+  100% {
+    width: 100%;
+  }
+}
+header #logo h1 .yellow {
+  color: #c8c8c8;
+}
+
+header nav {
+  display: block;
+  font-family: "Dosis", sans-serif;
+  float: right;
+  width: 50%;
+  text-transform: lowercase;
+  overflow: hidden;
+}
+
+header nav ul {
+  display: block;
+  height: 25px;
+  width: 100%;
+  margin: 32.5px 0;
+  padding: 0 0;
+  padding: 0 30%;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-right: 2.3em;
+  line-height: 35px;
+}
+
+header nav ul li a {
+  line-height: 28px;
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #c8c8c8;
+  text-transform: capitalize;
+}
+
+header nav ul li a:hover {
+  color: #ffaf00;
+}
+
+/* PARALLAX */
+.wrapper-p {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+  background: #323232;
+}
+
+.section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  width: 100%;
+}
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: translateZ(-1px) scale(2) translateY(-200px);
+  background-size: 100%;
+  z-index: -1;
+}
+
+.bg1::after {
+  background-image: url("images/brucelee_svg.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.wrapper-p .section h1 {
+  font-size: 52px;
+  color: #323232;
+  text-shadow: #faaa00 4px 4px 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Orbitron", "Shadows Into Light", "Long Cang", cursive;
+  transform: translateY(200px) translateX(-440px);
+}
+
+/* STORY */
+#story .wrapper article .p-right, #story .wrapper article .p-left {
+  background: rgba(255, 255, 255, 0);
+}
+
+#story {
+  height: 1200px;
+  background: #323232;
+  font-family: "Fjalla One", "Dosis", sans-serif;
+  font-weight: thin;
+  overflow: hidden;
+}
+
+#story .wrapper h2.story {
+  color: #c8f0f0;
+  text-shadow: #141464 10px 10px 20px;
+  font-family: "Fjalla One", "Orbitron", arial;
+  font-weight: 100;
+  text-transform: uppercase;
+  background-image: url("images/red-trace.png");
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-x: 460px;
+  background-position-y: -200px;
+  text-align: center;
+  width: 100%;
+  font-size: 120px;
+  padding-top: 100px;
+  padding-bottom: 190px;
+  font-style: italic;
+}
+
+#story .wrapper article {
+  color: #c8f0f0;
+  font-family: "Dosis", arial;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+#story .wrapper article .pic-left, #story .wrapper article .pic-right {
+  background-image: url(images/presentation.jpg);
+  height: 277px;
+  background-size: 300px 277px;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  width: 19%;
+  margin-left: 105px;
+  /*160px;*/
+  margin-right: 60px;
+  transform: translateY(-15px);
+  box-shadow: #140000 -2px -2px 5px 5px;
+}
+
+#story .wrapper article .p-right, #story .wrapper article .p-left {
+  width: 40%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 20px;
+}
+#story .wrapper article .p-right::first-letter, #story .wrapper article .p-left::first-letter {
+  color: #efaf00;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#story .wrapper article .p-left {
+  margin: 0;
+  padding: 0;
+  margin-left: 460px;
+}
+
+#story .wrapper article .pic-right {
+  background-image: url(images/main-image1.jpg);
+  background-size: 300px 277px;
+  margin: 0;
+  padding: 0;
+  margin-left: 80px;
+  box-shadow: #140000 2px 2px 5px 5px;
+  transform: translateY(35px);
+}
+
+/* VIDEO */
+#video {
+  height: 2200px;
+  font-family: "Fjalla One", "Dosis", sans-serif;
+  font-weight: thin;
+  overflow: hidden;
+  background: black;
+  box-shadow: #c8f0f0 10px 0px 60px 30px;
+}
+
+#video .wrapper h2.video {
+  color: #c8f0f0;
+  text-shadow: #141464 10px 10px 20px;
+  font-weight: 100;
+  text-transform: uppercase;
+  background-image: url("images/red-trace.png");
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-x: 460px;
+  background-position-y: -200px;
+  text-align: center;
+  width: 100%;
+  font-size: 120px;
+  padding-top: 100px;
+  padding-bottom: 190px;
+  font-style: italic;
+}
+
+#video .wrapper iframe {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 250px;
+}
+
+/* CONTACT */
+#contact {
+  height: 600px;
+  background: white;
+}
+
+#contact .wrapper h2.contact {
+  color: #c8f0f0;
+  text-shadow: #141464 10px 10px 20px;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-family: "Fjalla One", "Dosis", sans-serif;
+  background-image: url("images/red-trace.png");
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-x: 460px;
+  background-position-y: -200px;
+  text-align: center;
+  width: 100%;
+  font-size: 120px;
+  padding-top: 100px;
+  padding-bottom: 190px;
+  font-style: italic;
+}
+
+#contact .wrapper p {
+  font-size: 20px;
+  font-family: "Dosis", arial;
+  text-align: center;
+}
+
+#contact .wrapper form {
+  background: white;
+  margin: 0;
+  padding-left: 250px;
+  padding-top: 70px;
+  height: 200px;
+}
+
+#contact .wrapper form input {
+  margin-left: 90px;
+}
+
+#contact .wrapper form input#mail, #contact .wrapper form input#name {
+  line-height: 18px;
+  font-size: 18px;
+  width: 300px;
+}
+
+#contact .wrapper form input#send {
+  color: white;
+  background: #0000aa;
+  border: solid transparent;
+  border-radius: 5px;
+  padding: 6px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+#contact .wrapper form input#send:hover {
+  background: #000091;
+}
+#contact .wrapper form input#send:active {
+  background: #000077;
+}
+
+/* FOOTER */
+footer {
+  background: #323232;
+  height: 300px;
+  color: #c8c8c8;
+}
+
+footer .wrapper h2 {
+  padding-top: 50px;
+  text-align: center;
+  margin: 50px auto;
+  font-family: "Orbitron", cursive, Arial, Helvetica, sans-serif;
+  font-size: 56px;
+  text-transform: uppercase;
+}
+
+footer .wrapper small {
+  text-align: center;
+  margin-left: 630px;
+}
+
+/*# sourceMappingURL=style.css.map */

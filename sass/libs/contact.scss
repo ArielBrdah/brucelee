@@ -1,0 +1,87 @@
+/* CONTACT */
+
+$height-contact:600px;
+#contact{
+    height: $height-contact;
+    background:white;
+}
+
+#contact .wrapper h2.contact{
+    // color and fonts
+    // color: #000000;
+    color:rgb(200,240,240);
+    text-shadow: rgb(20,20,100,1) 10px 10px 20px;
+    font-weight:100;
+    text-transform: uppercase;
+    font-family: 'Fjalla One','Dosis',sans-serif;
+    background-image: url('images/red-trace.png');
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: 460px;
+    background-position-y: -200px;
+
+    //disposition
+    text-align:center;
+    width:100%;
+    font-size: 120px;
+    padding-top: 100px;
+    padding-bottom: 190px;
+    font-style: italic;
+    // margin-bottom:50px;    
+}
+
+#contact .wrapper p{
+    font-size:20px;
+    font-family: 'Dosis',arial;
+    text-align: center;
+    // margin: 50px 0;
+}
+
+#contact .wrapper form{
+    background:white;
+    // background:gray;
+    margin: 0;
+    padding-left:250px;
+    padding-top: 70px;
+    height:200px;
+}
+#contact .wrapper form input{
+margin-left: 90px;
+// padding:20px;
+// font-size: 18px;
+// line-height: 18px;
+}
+
+%my-font{
+line-height: 18px;
+font-size: 18px;
+width:300px;
+}
+
+#contact .wrapper form input#name{
+@extend %my-font;
+}
+
+#contact .wrapper form input#mail{
+@extend %my-font;
+}
+
+#contact .wrapper form input#send{
+    color:white;
+    background: #0000aa;
+    border: solid transparent;
+    border-radius: 5px;
+    padding: 6px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+
+        &:hover{
+            background:darken($color: #0000aa, $amount: 5);
+         }
+
+        &:active{
+            background:darken($color: #0000aa, $amount: 10);
+        }
+}
+
